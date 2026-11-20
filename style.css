@@ -1,4 +1,3 @@
-
 /* =========================
    PENGATURAN DASAR
 ========================= */
@@ -591,4 +590,29 @@ body.dark-mode #website-settings {
         right: auto;
         padding: 9px;
     }
+}
+
+#drag-handle {
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+#drag-handle:active {
+    cursor: grabbing;
+}
+
+#website-settings {
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+#website-settings:active {
+    cursor: grabbing;
+}
+
+#website-settings button {
+    cursor: pointer;
+    touch-action: manipulation;
 }
