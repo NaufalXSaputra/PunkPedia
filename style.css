@@ -379,8 +379,9 @@ header {
     }
 }
 
-
-/* KARTU PROFIL PRIBADI */
+/* =========================
+   KARTU PROFIL PRIBADI
+========================= */
 .profile-card {
     text-align: center;
     overflow-wrap: anywhere;
@@ -441,4 +442,153 @@ header {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* ==================================
+   PENGATURAN DARK MODE & UKURAN TEKS
+================================== */
+
+/* Ukuran tulisan artikel */
+.content p {
+    font-size: var(--article-font-size, 16px);
+}
+
+/* Panel pengaturan - POSISI KIRI BAWAH */
+#website-settings {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: auto;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    background-color: white;
+    color: #222;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+#website-settings button {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    background-color: rgb(50, 8, 8);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#website-settings button:hover {
+    background-color: red;
+}
+
+.font-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+#font-size-display {
+    min-width: 35px;
+    text-align: center;
+}
+
+/* ==================================
+   DARK MODE
+================================== */
+
+body.dark-mode {
+    background-color: #181818;
+    color: #eeeeee;
+}
+
+/* Artikel */
+body.dark-mode .content {
+    background-color: #292929;
+    color: #eeeeee;
+    border-color: #444;
+}
+
+body.dark-mode .content h1 {
+    color: #ff5555;
+}
+
+body.dark-mode .content h2,
+body.dark-mode .content h3 {
+    color: #eeeeee;
+}
+
+/* Sidebar */
+body.dark-mode .sidebar {
+    border-color: #555;
+}
+
+body.dark-mode .sidebar a {
+    color: #d6a6ff;
+}
+
+/* Kotak informasi */
+body.dark-mode .info-box,
+body.dark-mode .audio-player,
+body.dark-mode .video-player {
+    background-color: #292929;
+    color: #eeeeee;
+    border-color: #555;
+}
+
+body.dark-mode .info-box p,
+body.dark-mode .audio-player p {
+    color: #eeeeee;
+    border-color: #555;
+}
+
+/* Profil */
+body.dark-mode .profile-card hr {
+    border-color: #555;
+}
+
+body.dark-mode .profile-card a {
+    color: #d6a6ff;
+}
+
+/* Komentar */
+body.dark-mode .comment-intro,
+body.dark-mode .comment-panel {
+    background-color: #292929;
+    color: #eeeeee;
+    border-color: #555;
+}
+
+body.dark-mode .comment-intro h3 {
+    color: #eeeeee;
+}
+
+body.dark-mode .comment {
+    background-color: #333;
+    color: #eeeeee;
+    border-color: #555;
+}
+
+/* Panel pengaturan tetap terang */
+body.dark-mode #website-settings {
+    background-color: #292929;
+    color: white;
+    border-color: #666;
+}
+
+/* Tampilan HP */
+@media (max-width: 700px) {
+    #website-settings {
+        bottom: 12px;
+        left: 12px;
+        right: auto;
+        padding: 9px;
+    }
 }
